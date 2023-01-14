@@ -86,13 +86,6 @@ router.post("/", async function (req, res) {
     });
   }
 
-//   console.log(final_singer);
-//   console.log(final_lyricist);
-//   console.log(final_composer);
-//   console.log(final_genre);
-//   console.log(final_songTitle);
-//   console.log(final_lyrics);
-
   if (range == 0 && sorting > 0) {
     size = 10;
     sort_method = [{ viewCount: { order: "desc" } }];

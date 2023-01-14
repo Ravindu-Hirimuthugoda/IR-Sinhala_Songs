@@ -1,0 +1,18 @@
+.tile {
+  width: 90%;
+  max-width: 43rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: white;
+  margin: 1rem auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.tile h3 {
+  margin: 0 0 0.25rem 0;
+}

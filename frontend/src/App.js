@@ -2,9 +2,9 @@ import SimpleInput from "./components/simpleInput";
 
 function App() {
   return (
-    <div className="app">
-      <SimpleInput />
-    </div>
+      <div>
+        <SimpleInput />
+      </div>
   );
 }
 
