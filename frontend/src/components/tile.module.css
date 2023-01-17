@@ -1,16 +1,20 @@
 .tile {
+  display: flex;
+  flex-direction: row;
   width: 90%;
   max-width: 43rem;
   padding: 1rem;
   border-radius: 12px;
   background-color: white;
   margin: 1rem auto;
+  cursor: pointer;
 }
 
 .row {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
 }
 
 .tile h3 {

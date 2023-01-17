@@ -22,6 +22,16 @@ body {
   margin: 3rem auto;
 }
 
+.dropDownRow {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 50px;
+  justify-content: space-around;
+  margin-left: 15%;
+  align-items: center;
+}
+
 .form-control {
   margin-bottom: 1rem;
 }

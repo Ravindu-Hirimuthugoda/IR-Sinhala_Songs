@@ -28,7 +28,7 @@ router.post("/", async function (req, res) {
   var range = 0;
   var sort_method = [];
 
-  if (query_words.length > 8) {
+  if (query_words.length > 20) {
     final_lyrics = final_lyrics + 2;
     field_type = "best_fields";
   } else {
@@ -97,6 +97,13 @@ router.post("/", async function (req, res) {
   removing_query_words.forEach((word) => {
     query = query.replace(word, "");
   });
+
+  // console.log("singer",final_singer);
+  // console.log("title",final_songTitle);
+  // console.log("composer",final_composer);
+  // console.log("genere",final_genre);
+  // console.log("lyricist",final_lyricist);
+  // console.log("lyrics",final_lyrics);
 
   var result = await client.search({
     index: "sinhala_songs_index",

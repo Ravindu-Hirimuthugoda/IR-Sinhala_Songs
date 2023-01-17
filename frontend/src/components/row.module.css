@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 15px;
+    color: black;
+}
+
+.rowContent {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  margin-right: 10px;
+}
