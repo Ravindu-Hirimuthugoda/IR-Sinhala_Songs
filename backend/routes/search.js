@@ -98,13 +98,6 @@ router.post("/", async function (req, res) {
     query = query.replace(word, "");
   });
 
-  // console.log("singer",final_singer);
-  // console.log("title",final_songTitle);
-  // console.log("composer",final_composer);
-  // console.log("genere",final_genre);
-  // console.log("lyricist",final_lyricist);
-  // console.log("lyrics",final_lyrics);
-
   var result = await client.search({
     index: "sinhala_songs_index",
     body: {

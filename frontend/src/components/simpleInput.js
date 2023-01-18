@@ -21,7 +21,6 @@ const SimpleInput = (props) => {
     async function fetchAllSongs() {
       const res = await fetch("http://localhost:5000/all");
       const data = await res.json();
-      // console.log(data);
       setSongs(data.hits);
     };
     async function fetchAllGenres() {
@@ -38,7 +37,6 @@ const SimpleInput = (props) => {
 
   const formSubmissionHandler = async (event) => {
     event.preventDefault();
-    // console.log(enteredName);
     const response = await fetch("http://localhost:5000/search", {
       method: "POST",
       body: JSON.stringify({ query: enteredName }),
@@ -47,7 +45,6 @@ const SimpleInput = (props) => {
       },
     });
     const data = await response.json();
-    // console.log(data.hits);
     setSongs(data.hits);
   };
 
@@ -71,7 +68,6 @@ const SimpleInput = (props) => {
   });
 
   const genreHandler = async (event) => {
-    // console.log(event.target.value);
     if(event.target.value !== 'Genre'){
       const response = await fetch("http://localhost:5000/genre", {
         method: "POST",
@@ -81,15 +77,13 @@ const SimpleInput = (props) => {
         },
       });
       const data = await response.json();
-      // console.log(data.hits);
       setSongs(data.hits);
     }
   };
 
   const singerHandler = async (event) => {
-    // console.log(event.target.value);
     if (event.target.value !== "Singer") {
-      const response = await fetch("http://localhost:5000/genre", {
+      const response = await fetch("http://localhost:5000/singer", {
         method: "POST",
         body: JSON.stringify({ query: event.target.value }),
         headers: {
@@ -97,15 +91,13 @@ const SimpleInput = (props) => {
         },
       });
       const data = await response.json();
-      // console.log(data.hits);
       setSongs(data.hits);
     }
   };
 
   const composerHandler = async (event) => {
-    // console.log(event.target.value);
     if (event.target.value !== "Composer") {
-      const response = await fetch("http://localhost:5000/genre", {
+      const response = await fetch("http://localhost:5000/composer", {
         method: "POST",
         body: JSON.stringify({ query: event.target.value }),
         headers: {
@@ -113,15 +105,13 @@ const SimpleInput = (props) => {
         },
       });
       const data = await response.json();
-      // console.log(data.hits);
       setSongs(data.hits);
     }
   };
 
   const lyricistHandler = async (event) => {
-    // console.log(event.target.value);
     if (event.target.value !== "Lyricist") {
-      const response = await fetch("http://localhost:5000/genre", {
+      const response = await fetch("http://localhost:5000/lyricist", {
         method: "POST",
         body: JSON.stringify({ query: event.target.value }),
         headers: {
@@ -129,7 +119,6 @@ const SimpleInput = (props) => {
         },
       });
       const data = await response.json();
-      // console.log(data.hits);
       setSongs(data.hits);
     }
   };

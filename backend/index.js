@@ -3,8 +3,11 @@ var bodyParser = require("body-parser");
 var cors = require("cors");
 var searchRoutes = require("./routes/search");
 var allSongsRoutes = require("./routes/allSongs");
-var allGenres = require("./routes/filters");
+var allGenresRoutes = require("./routes/filters");
 var genreFilterRoutes = require("./routes/genreFilter");
+var singerFilterRoutes = require("./routes/singerFilter");
+var composerFilterRoutes = require("./routes/composerFilter");
+var lyricistFilterRoutes = require("./routes/lyricistFilter");
 
 var app = express();
 var port = 5000;
@@ -23,11 +26,11 @@ app.use(
 );
 app.use("/search", searchRoutes);
 app.use("/all", allSongsRoutes);
-app.use("/filters", allGenres);
+app.use("/filters", allGenresRoutes);
 app.use("/genre", genreFilterRoutes);
-// app.use("/singer",);
-// app.use("/composer",);
-// app.use("/lyricist",);
+app.use("/singer", singerFilterRoutes);
+app.use("/composer", composerFilterRoutes);
+app.use("/lyricist", lyricistFilterRoutes);
 
 app.get("/", (req, res) => res.send("Hello World!"));
 

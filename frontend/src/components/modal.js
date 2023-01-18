@@ -3,7 +3,6 @@ import styles from "./modal.module.css";
 import RowItem from "./rowItem";
 
 const Modal = (props) => {
-  // console.log(props.details);
   return (
     <>
       <div className={styles.darkBG} onClick={() => props.onClickHandler()} />
